@@ -1,0 +1,35 @@
+{
+  "name": "super-mega-app",
+  "version": "1.0.0",
+  "description": "super-mega-app in react",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel public/index.html",
+    "create": "mkdir testfolder",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericmuh/learn-react-series.git"
+  },
+  "keywords": [
+    "super-mega-app",
+    "react-app"
+  ],
+  "author": "ERIC",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ericmuh/learn-react-series/issues"
+  },
+  "homepage": "https://github.com/ericmuh/learn-react-series#readme",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "parcel-bundler": "^1.12.4"
+  }
+}
