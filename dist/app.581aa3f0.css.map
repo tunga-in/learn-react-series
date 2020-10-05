@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/test.css"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA;AACA","file":"app.581aa3f0.css","sourceRoot":"../public","sourcesContent":[".warning{\n    background-color:orange;\n}\n.danger{\n    background-color:red;\n}"]}
