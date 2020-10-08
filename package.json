@@ -4,7 +4,7 @@
   "description": "super-mega-app in react",
   "main": "index.js",
   "scripts": {
-    "start": "parcel public/index.html",
+    "start": "parcel public/index.html --port 3000",
     "dev": "",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -24,7 +24,8 @@
   "homepage": "https://github.com/ericmuh/learn-react-series#readme",
   "dependencies": {
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",
