@@ -1,37 +1,51 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import logo from "../assets/img/logo.jpeg"
 // functional
 const Navigation = () => {
   const userIsloggedIn = true;
   if (userIsloggedIn) {
     return (
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
+      <nav className="navbar">
+        <div>
+        <Link to="/" className="navbrand"><img src={logo} alt="logo" /> <span className="navbrand-text">super-duper-blog-app</span></Link>
+        </div>
+        <ul className="nav">
+          <li className="nav-list-item">
+            <Link to="/addblog" className="nav-link">
+              create blog
+            </Link>
           </li>
-          <li>
-            <Link to="/addblog">create blog</Link>
+          <li className="nav-list-item">
+            <Link to="/login" className="nav-link">
+              login
+            </Link>
           </li>
-          <li>
-            <Link to="/login">login</Link>
-          </li>
-          <li>
-            <Link to="/profile">Profile</Link>
+          <li className="nav-list-item">
+            <Link to="/profile" className="nav-link">
+              Profile
+            </Link>
           </li>
         </ul>
       </nav>
     );
   } else {
     return (
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
+      <nav className="navbar">
+        <div>
+          <Link to="/" className="navbrand"><img src={logo} alt="logo" />super-duper-blog-app</Link>
+        </div>
+        <ul className="nav">
+          <li className="nav-list-item">
+            <Link to="/" className="nav-link">
+              Home
+            </Link>
           </li>
-         
-          <li>
-            <Link to="/login">login</Link>
+
+          <li className="nav-list-item">
+            <Link to="/login" className="nav-link">
+              login
+            </Link>
           </li>
         </ul>
       </nav>

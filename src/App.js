@@ -3,7 +3,6 @@ import BlogPreview from "./components/BlogPreview";
 import Navigation from "./components/Navigation";
 import AddBlog from "./pages/AddBlog";
 import LoginPage from "./pages/LoginPage";
-
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 // look at hash router from react-router-dom ...
@@ -11,8 +10,10 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 const App = () => {
   return (
     <>
+    
       <Router>
         <Navigation></Navigation>
+        <main>
         <Switch>
           <Route path="/" exact>
             <h1>Am at home</h1>
@@ -24,6 +25,7 @@ const App = () => {
             <LoginPage />
           </Route>
         </Switch>
+        </main>
       </Router>
     </>
   );

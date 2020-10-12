@@ -32285,7 +32285,9 @@ if ("development" !== "production") {
     style: _propTypes.default.object
   });
 }
-},{"react-router":"../node_modules/react-router/esm/react-router.js","@babel/runtime/helpers/esm/inheritsLoose":"../node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"../node_modules/react/index.js","history":"../node_modules/history/esm/history.js","prop-types":"../node_modules/prop-types/index.js","tiny-warning":"../node_modules/tiny-warning/dist/tiny-warning.esm.js","@babel/runtime/helpers/esm/extends":"../node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"../node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","tiny-invariant":"../node_modules/tiny-invariant/dist/tiny-invariant.esm.js"}],"../src/components/Navigation.js":[function(require,module,exports) {
+},{"react-router":"../node_modules/react-router/esm/react-router.js","@babel/runtime/helpers/esm/inheritsLoose":"../node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"../node_modules/react/index.js","history":"../node_modules/history/esm/history.js","prop-types":"../node_modules/prop-types/index.js","tiny-warning":"../node_modules/tiny-warning/dist/tiny-warning.esm.js","@babel/runtime/helpers/esm/extends":"../node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"../node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","tiny-invariant":"../node_modules/tiny-invariant/dist/tiny-invariant.esm.js"}],"../src/assets/img/logo.jpeg":[function(require,module,exports) {
+module.exports = "/logo.b5e6ac0d.jpeg";
+},{}],"../src/components/Navigation.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32297,6 +32299,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactRouterDom = require("react-router-dom");
 
+var _logo = _interopRequireDefault(require("../assets/img/logo.jpeg"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // functional
@@ -32304,20 +32308,55 @@ var Navigation = function Navigation() {
   var userIsloggedIn = true;
 
   if (userIsloggedIn) {
-    return /*#__PURE__*/_react.default.createElement("nav", null, /*#__PURE__*/_react.default.createElement("ul", null, /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-      to: "/"
-    }, "Home")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-      to: "/addblog"
-    }, "create blog")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-      to: "/login"
-    }, "login")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-      to: "/profile"
+    return /*#__PURE__*/_react.default.createElement("nav", {
+      className: "navbar"
+    }, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+      to: "/",
+      className: "navbrand"
+    }, /*#__PURE__*/_react.default.createElement("img", {
+      src: _logo.default,
+      alt: "logo"
+    }), " ", /*#__PURE__*/_react.default.createElement("span", {
+      className: "navbrand-text"
+    }, "super-duper-blog-app"))), /*#__PURE__*/_react.default.createElement("ul", {
+      className: "nav"
+    }, /*#__PURE__*/_react.default.createElement("li", {
+      className: "nav-list-item"
+    }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+      to: "/addblog",
+      className: "nav-link"
+    }, "create blog")), /*#__PURE__*/_react.default.createElement("li", {
+      className: "nav-list-item"
+    }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+      to: "/login",
+      className: "nav-link"
+    }, "login")), /*#__PURE__*/_react.default.createElement("li", {
+      className: "nav-list-item"
+    }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+      to: "/profile",
+      className: "nav-link"
     }, "Profile"))));
   } else {
-    return /*#__PURE__*/_react.default.createElement("nav", null, /*#__PURE__*/_react.default.createElement("ul", null, /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-      to: "/"
-    }, "Home")), /*#__PURE__*/_react.default.createElement("li", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-      to: "/login"
+    return /*#__PURE__*/_react.default.createElement("nav", {
+      className: "navbar"
+    }, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+      to: "/",
+      className: "navbrand"
+    }, /*#__PURE__*/_react.default.createElement("img", {
+      src: _logo.default,
+      alt: "logo"
+    }), "super-duper-blog-app")), /*#__PURE__*/_react.default.createElement("ul", {
+      className: "nav"
+    }, /*#__PURE__*/_react.default.createElement("li", {
+      className: "nav-list-item"
+    }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+      to: "/",
+      className: "nav-link"
+    }, "Home")), /*#__PURE__*/_react.default.createElement("li", {
+      className: "nav-list-item"
+    }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+      to: "/login",
+      className: "nav-link"
     }, "login"))));
   }
 };
@@ -32330,7 +32369,7 @@ var _default = Navigation; // props : state.
 ///? classes in javascript
 
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js"}],"../src/pages/AddBlog.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js","../assets/img/logo.jpeg":"../src/assets/img/logo.jpeg"}],"../src/pages/AddBlog.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32391,14 +32430,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // look at hash router from react-router-dom ...
 // have a simple writeup on the difference and how to approach.
 var App = function App() {
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.BrowserRouter, null, /*#__PURE__*/_react.default.createElement(_Navigation.default, null), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Switch, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.BrowserRouter, null, /*#__PURE__*/_react.default.createElement(_Navigation.default, null), /*#__PURE__*/_react.default.createElement("main", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Switch, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     path: "/",
     exact: true
   }, /*#__PURE__*/_react.default.createElement("h1", null, "Am at home")), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     path: "/addblog"
   }, /*#__PURE__*/_react.default.createElement(_AddBlog.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     path: "/login"
-  }, /*#__PURE__*/_react.default.createElement(_LoginPage.default, null)))));
+  }, /*#__PURE__*/_react.default.createElement(_LoginPage.default, null))))));
 };
 
 var _default = App; // have a 404 page which loads when the path that user passed is not availabe
@@ -32407,7 +32446,79 @@ var _default = App; // have a 404 page which loads when the path that user passe
 //TODO https://reactrouter.com/
 
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","./components/BlogPreview":"../src/components/BlogPreview.js","./components/Navigation":"../src/components/Navigation.js","./pages/AddBlog":"../src/pages/AddBlog.js","./pages/LoginPage":"../src/pages/LoginPage.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js"}],"../src/index.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./components/BlogPreview":"../src/components/BlogPreview.js","./components/Navigation":"../src/components/Navigation.js","./pages/AddBlog":"../src/pages/AddBlog.js","./pages/LoginPage":"../src/pages/LoginPage.js","react-router-dom":"../node_modules/react-router-dom/esm/react-router-dom.js"}],"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
+
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
+  }
+
+  return bundleURL;
+}
+
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+
+    if (matches) {
+      return getBaseURL(matches[0]);
+    }
+  }
+
+  return '/';
+}
+
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
+}
+
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+
+function updateLink(link) {
+  var newLink = link.cloneNode();
+
+  newLink.onload = function () {
+    link.remove();
+  };
+
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+
+var cssTimeout = null;
+
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
+  }
+
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
+      }
+    }
+
+    cssTimeout = null;
+  }, 50);
+}
+
+module.exports = reloadCSS;
+},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../src/assets/css/app.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../src/index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -32416,12 +32527,14 @@ var _reactDom = _interopRequireDefault(require("react-dom"));
 
 var _App = _interopRequireDefault(require("./App"));
 
+require("./assets/css/app.css");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var mountNode = document.querySelector(".root");
 
 _reactDom.default.render( /*#__PURE__*/_react.default.createElement(_App.default, null), mountNode);
-},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./App":"../src/App.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./App":"../src/App.js","./assets/css/app.css":"../src/assets/css/app.css"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -32449,7 +32562,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34795" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33555" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
