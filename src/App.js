@@ -3,6 +3,7 @@ import BlogPreview from "./components/BlogPreview";
 import Navigation from "./components/Navigation";
 import AddBlog from "./pages/AddBlog";
 import LoginPage from "./pages/LoginPage";
+import logo from "./assets/img/logo.jpeg"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 // look at hash router from react-router-dom ...
@@ -23,6 +24,10 @@ const App = () => {
           </Route>
           <Route path="/login" >
             <LoginPage />
+          </Route>
+          <Route path="/single" >
+           
+            <BlogPreview  />
           </Route>
         </Switch>
         </main>

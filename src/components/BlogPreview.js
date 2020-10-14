@@ -1,22 +1,29 @@
-import React from "react";
+import React, { Component } from "react";
+class BlogPreview extends Component {
+  constructor() {
+    super();
+    this.state = {
+      text: "initial text",
+    };
+  }
+  getText = (event) => {
+    this.setState({ text: event.target.value });
+  };
+  render() {
+    return (
+      <>
+        <h1>hello world {this.props.name}</h1>
+        <p>{this.state.text}</p>
+        <input placeholder="Enter some text" onChange={this.getText} />
+      </>
+    );
+  }
+}
 
-// functional
-const BlogPreview = () => {
-  return (
-    <div className="card">
-    <img src="https://picsum.photos/seed/picsum/200/300" alt="our image" />
 
-    <div className="card-body">
-        <p>lorem somthing ...<a href="ourblog"> readmore</a></p>
-    </div>
-    </div>
-  );
-};
 
 export default BlogPreview;
 
+// props : shared data --passed in through the parent compnent
 
-
-/// Single Page Applications : SPA.
-
-
+// state : internal data -- available for the component it self
