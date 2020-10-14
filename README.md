@@ -11,7 +11,7 @@ cd learn-react-series/
 
 ```
 ```bash
-git checkout 02.5.react-with-parcel-bundler 
+git checkout 4.super-duper-blog-app
 
 ```
 
