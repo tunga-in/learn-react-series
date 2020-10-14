@@ -1,10 +1,10 @@
 import React from "react";
-import BlogPreview from "./components/BlogPreview";
+import ExampleComponent from "./components/ExampleComponent";
 import Navigation from "./components/Navigation";
-import AddBlog from "./pages/AddBlog";
-import LoginPage from "./pages/LoginPage";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import ExamplePage from "./pages/ExamplePage";
+import AnotherPage from "./pages/AnotherPage";
 
 // look at hash router from react-router-dom ...
 // have a simple writeup on the difference and how to approach.
@@ -16,12 +16,13 @@ const App = () => {
         <Switch>
           <Route path="/" exact>
             <h1>Am at home</h1>
+            <ExampleComponent/>
           </Route>
-          <Route path="/addblog" >
-            <AddBlog />
+          <Route path="/page1" >
+            <ExamplePage />
           </Route>
-          <Route path="/login" >
-            <LoginPage />
+          <Route path="/page2" >
+            <AnotherPage/>
           </Route>
         </Switch>
       </Router>
@@ -31,8 +32,8 @@ const App = () => {
 
 export default App;
 
+//TODOS Assigments
 // have a 404 page which loads when the path that user passed is not availabe
-// React-router : atleast .
-// useState, useEffect hooks
+// look at useState, useEffect hooks
 
-//TODO https://reactrouter.com/
+//? ref https://reactrouter.com/

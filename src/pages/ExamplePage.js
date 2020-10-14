@@ -1,8 +1,8 @@
 import React from "react"
 
-const AddBlog =()=>{
+const ExamplePage =()=>{
     return(<div>
         <h1>Add blog page</h1>
     </div>)
 }
-export default AddBlog
+export default ExamplePage

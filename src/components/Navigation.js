@@ -11,14 +11,12 @@ const Navigation = () => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/addblog">create blog</Link>
+            <Link to="/page1">Example page</Link>
           </li>
           <li>
-            <Link to="/login">login</Link>
+            <Link to="/page2">page 2</Link>
           </li>
-          <li>
-            <Link to="/profile">Profile</Link>
-          </li>
+       
         </ul>
       </nav>
     );
