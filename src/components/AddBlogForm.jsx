@@ -4,7 +4,7 @@ const AddBlogForm = () => {
   return (
     <div>
       <div className="form-container container">
-        <form action="/action_page.php">
+        <form action="/">
           <label for="fname">Title</label>
           <input
             type="text"
