@@ -1,9 +1,12 @@
 import React from "react";
-import BlogPreview from "./components/BlogPreview";
-import Navigation from "./components/Navigation";
-import AddBlog from "./pages/AddBlog";
-import LoginPage from "./pages/LoginPage";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Navigation from "./components/Navigation";
+import AddBlog from "./pages/AddBlogPage";
+import LoginPage from "./pages/LoginPage";
+import HomePage from "./pages/HomePage";
+import SingleBlogPage from "./pages/SingleBlogPage";
+import Footer from './components/Footer'
+import Page404 from "./pages/Page404";
 
 const App = () => {
   return (
@@ -13,19 +16,15 @@ const App = () => {
         <main>
           <Switch>
             <Route path="/" exact>
-              <h1>Am at home</h1>
+              <HomePage />
             </Route>
-            <Route path="/addblog">
-              <AddBlog />
-            </Route>
-            <Route path="/login">
-              <LoginPage />
-            </Route>
-            <Route path="/single">
-              <BlogPreview />
-            </Route>
+            <Route path="/addblog" component={AddBlog} />
+            <Route path="/login" component={LoginPage} />
+            <Route path="/singleblog" component={SingleBlogPage} />
+            <Route component={Page404} />
           </Switch>
         </main>
+        <Footer/>
       </Router>
     </>
   );

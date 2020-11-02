@@ -1,10 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/img/logo.jpeg"
-// functional
+
 const Navigation = () => {
-  const userIsloggedIn = true;
-  if (userIsloggedIn) {
+
     return (
       <nav className="navbar">
         <div>
@@ -18,40 +17,14 @@ const Navigation = () => {
           </li>
           <li className="nav-list-item">
             <Link to="/login" className="nav-link">
-              login
-            </Link>
-          </li>
-          <li className="nav-list-item">
-            <Link to="/profile" className="nav-link">
-              Profile
-            </Link>
-          </li>
-        </ul>
-      </nav>
-    );
-  } else {
-    return (
-      <nav className="navbar">
-        <div>
-          <Link to="/" className="navbrand"><img src={logo} alt="logo" />super-duper-blog-app</Link>
-        </div>
-        <ul className="nav">
-          <li className="nav-list-item">
-            <Link to="/" className="nav-link">
-              Home
-            </Link>
-          </li>
-
-          <li className="nav-list-item">
-            <Link to="/login" className="nav-link">
-              login
+              Get Started
             </Link>
           </li>
         </ul>
       </nav>
     );
   }
-};
+
 
 export default Navigation;
 

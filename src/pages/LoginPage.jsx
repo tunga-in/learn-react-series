@@ -1,17 +1,11 @@
-import React,{useState} from "react";
+import React from "react";
 
 const LoginPage = () => {
-const [text, setText] = useState("");
 
   return (
-    <div>
-      <h1>Login page</h1>
-      <p>{text}</p>
-      <input
-        onChange={(event) => setText(event.target.value)}
-        placeholder="username"
-      />
-    </div>
+    <>
+      <h2>Login Page</h2>
+    </>
   );
 };
 export default LoginPage;
