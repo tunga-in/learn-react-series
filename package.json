@@ -1,36 +1,39 @@
 {
-  "name": "super-mega-app",
-  "version": "1.0.0",
-  "description": "super-mega-app in react",
-  "main": "index.js",
-  "scripts": {
-    "start": "parcel public/index.html --port 3000",
-    "dev": "",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ericmuh/learn-react-series.git"
-  },
-  "keywords": [
-    "super-mega-app",
-    "react-app"
-  ],
-  "author": "ERIC",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ericmuh/learn-react-series/issues"
-  },
-  "homepage": "https://github.com/ericmuh/learn-react-series#readme",
+  "name": "blog",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-router-dom": "^5.2.0"
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.0",
+    "web-vitals": "^0.2.4"
   },
-  "devDependencies": {
-    "@babel/core": "^7.11.6",
-    "@babel/preset-env": "^7.11.5",
-    "@babel/preset-react": "^7.10.4",
-    "parcel-bundler": "^1.12.4"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

@@ -1,9 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App"
-import "./assets/css/app.css"
+import "./assets/css/app.css";
+import App from "./App";
 
-const mountNode = document.querySelector(".root");
-ReactDOM.render(<App/>, mountNode);
-
-
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById("root")
+);
