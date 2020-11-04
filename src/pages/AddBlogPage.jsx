@@ -1,11 +1,11 @@
 import React from "react";
 import AddBlogForm from "../components/AddBlogForm";
 
-const AddBlog = () => {
+const AddBlog = ({blogs, setBlogs}) => {
   return (
     <>
       <h1 className="centered">Create a new Blog</h1>
-      <AddBlogForm/>
+      <AddBlogForm blogs={blogs} setBlogs={setBlogs}/>
     </>
   );
 };

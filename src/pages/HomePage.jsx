@@ -1,29 +1,12 @@
-import React, {useState} from "react";
+import React, {useContext} from "react";
 import BlogSection from "../components/BlogSection";
+import { BlogContext } from "../store/BlogContext"
 
-let blogArr = [{
-  id:"1",
-  title:"Example blog",
-  subject:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, praesentium!...",
-  image:"https://picsum.photos/seed/picsum/300/200"
-},
-{
-  id:"2",
-  title:"Example blog 2",
-  subject:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, praesentium!...",
-  image:"https://picsum.photos/300/200?grayscale"
-},
-{
-  id:"3",
-  title:"Example blog 3",
-  subject:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, praesentium!...",
-  image:"https://picsum.photos/300/200/?blur"
-},
-];
 
 const HomePage = () => {
 
-  const [blogs, setBlogs] =useState(blogArr);
+  const {blogs} =useContext(BlogContext)
+
 
   return (
     <>
@@ -33,7 +16,7 @@ const HomePage = () => {
 
       <section className="row  blog-section container">
         {blogs.map((item, index) => {
-          return <BlogSection key={index} title={item.title} subject={item.subject} image={item.image} setBlogs={setBlogs} blogs={blogs} />;
+          return <BlogSection key={index} title={item.title} subject={item.subject} image={item.image} />;
         })}
       </section>
     </>

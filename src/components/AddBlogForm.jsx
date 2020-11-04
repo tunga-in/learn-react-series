@@ -1,10 +1,27 @@
-import React from "react";
+import React, {useState, useContext} from "react";
 import { AiOutlineFileAdd } from "react-icons/ai";
+import { BlogContext } from "../store/BlogContext";
+
 const AddBlogForm = () => {
+  const [titleValue ,setTitleValue]=useState("")
+  const [subjectValue, setSubjectValue]=useState("")
+
+  const {blogs, setBlogs} =useContext(BlogContext)
+
+  const submitBlog = (e) => {
+    e.preventDefault();
+    setBlogs([...blogs,{
+      id:"5",
+      title:titleValue,
+      subject:subjectValue,
+      image:"https://picsum.photos/id/870/300/200?grayscale&blur=2"
+    }])
+  };
+
   return (
     <div>
       <div className="form-container container">
-        <form action="/">
+        <form onSubmit={submitBlog}>
           <label for="fname">Title</label>
           <input
             type="text"
@@ -12,8 +29,9 @@ const AddBlogForm = () => {
             className="form-control rounded-0"
             name="firstname"
             placeholder="blog Title.."
+            onChange={(e)=>setTitleValue(e.target.value)}
           />
-<br/>
+          <br />
           <label for="subject">Subject</label>
           <textarea
             id="subject"
@@ -21,6 +39,7 @@ const AddBlogForm = () => {
             name="subject"
             placeholder="Start Writing ...."
             style={{ height: "200px" }}
+            onChange={(e)=>setSubjectValue(e.target.value)}
           ></textarea>
           <label>
             <AiOutlineFileAdd style={{ fontSize: "2em" }} />
