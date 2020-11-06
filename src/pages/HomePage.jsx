@@ -5,6 +5,7 @@ import { BlogContext } from "../store/BlogContext"
 
 const HomePage = () => {
 
+    // getting the blogs
   const {blogs} =useContext(BlogContext)
 
 

@@ -1,13 +1,18 @@
-import React from "react";
+import React, {Component} from "react";
+import { BlogContext } from "../store/BlogContext";
 
-function Footer() {
+class Footer extends Component {
+  static contextType = BlogContext;
+  render(){
+    const {blogs, setBlogs} = this.context
+    
   return (
     <footer className="footer bg-dark">
       <div className="container">
-        <span className="text-muted">footer Content.</span>
+        <span className="text-muted">{blogs[0].title}.</span>
       </div>
     </footer>
-  );
+  );}
 }
 
 export default Footer;
