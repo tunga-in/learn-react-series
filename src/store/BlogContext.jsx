@@ -1,4 +1,4 @@
-import React, { createContext, useState, useReducer } from "react";
+import React, { createContext,  useReducer } from "react";
 
 let blogArr = [
   {
@@ -11,7 +11,7 @@ let blogArr = [
 ];
 
 //create our context
-export const BlogContext = createContext();
+export const BlogContext = createContext(); // initialize a context 
 
 const reducerFunction = (state, action) => {
 

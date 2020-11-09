@@ -68,3 +68,40 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+### Directory structure
+.
+├── package.json
+├── public
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── logo192.png
+│   ├── logo512.png
+│   ├── manifest.json
+│   └── robots.txt
+├── README.md
+├── src
+│   ├── App.jsx
+│   ├── assets
+│   │   ├── css
+│   │   │   └── app.css
+│   │   └── img
+│   │       ├── image.jpg
+│   │       └── logo.jpeg
+│   ├── components
+│   │   ├── AddBlogForm.jsx
+│   │   ├── BlogSection.jsx
+│   │   ├── Footer.jsx
+│   │   └── Navigation.jsx
+│   ├── index.js
+│   ├── notes.md
+│   ├── pages
+│   │   ├── AddBlogPage.jsx
+│   │   ├── HomePage.jsx
+│   │   ├── LoginPage.jsx
+│   │   ├── Page404.jsx
+│   │   └── SingleBlogPage.jsx
+│   └── store
+│       └── BlogContext.jsx
+└── yarn.lock
