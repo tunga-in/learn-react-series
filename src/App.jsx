@@ -11,10 +11,12 @@ import Page404 from "./pages/Page404";
 
 import Footer from "./components/Footer";
 import BlogContextProvider from "./store/BlogContext";
+import AuthContextProvider from "./store/AuthContext";
 
 const App = () => {
   return (
     <>
+    <AuthContextProvider>
       <BlogContextProvider>
         <Router>
           <Navigation />
@@ -34,6 +36,7 @@ const App = () => {
           <Footer />
         </Router>
       </BlogContextProvider>
+      </AuthContextProvider>
     </>
   );
 };
