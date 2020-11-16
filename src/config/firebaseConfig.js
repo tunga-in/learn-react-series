@@ -14,10 +14,12 @@ firebase.initializeApp(firebaseConfig);
 
 // firebase ui ...
 export const uiConfig = {
+  
   signInFlow: "popup",
 
   signInSuccessUrl: "/",
 
+  // Three button : facebook , google and email
   signInOptions: [
     firebase.auth.FacebookAuthProvider.PROVIDER_ID,
     firebase.auth.GoogleAuthProvider.PROVIDER_ID,

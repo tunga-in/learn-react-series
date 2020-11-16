@@ -12,6 +12,7 @@ import Page404 from "./pages/Page404";
 import Footer from "./components/Footer";
 import BlogContextProvider from "./store/BlogContext";
 import AuthContextProvider from "./store/AuthContext";
+import ProtectedRoute from "./components/ProtectedRoute"
 
 const App = () => {
   return (
@@ -22,12 +23,9 @@ const App = () => {
           <Navigation />
           <main>
             <Switch>
-              <Route path="/" exact>
-                <HomePage />
-              </Route>
-              <Route path="/addblog">
-                <AddBlog />
-              </Route>
+             
+              <Route path="/" exact component={HomePage}/>
+              <ProtectedRoute path="/addblog" component={AddBlog}/>
               <Route path="/login" component={LoginPage} />
               <Route path="/singleblog" component={SingleBlogPage} />
               <Route component={Page404} />
